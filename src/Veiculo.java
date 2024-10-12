@@ -5,7 +5,7 @@ public class Veiculo {
     private String marca;
     private String modelo;
     private int ano;
-    private StatusVeiculo status;
+    private StatusVeiculo statusVeiculo;
     private double quilometragemAtual;
     private LocalDate dataUltimaManutencao;
 
@@ -50,12 +50,12 @@ public class Veiculo {
         this.ano = ano;
     }
 
-    public StatusVeiculo getStatus() {
-        return status;
+    public StatusVeiculo getStatusVeiculo() {
+        return statusVeiculo;
     }
 
-    public void setStatus(StatusVeiculo status) {
-        this.status = status;
+    public void setStatusVeiculo(StatusVeiculo statusVeiculo) {
+        this.statusVeiculo = statusVeiculo;
     }
 
     public double getQuilometragemAtual() {
