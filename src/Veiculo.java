@@ -9,11 +9,12 @@ public class Veiculo {
     private double quilometragemAtual;
     private LocalDate dataUltimaManutencao;
 
-    public Veiculo(String placa, String marca, String modelo, int ano, double quilometragemAtual, LocalDate dataUltimaManutencao) {
+    public Veiculo() {
         this.placa = placa;
         this.marca = marca;
         this.modelo = modelo;
         this.ano = ano;
+        this.statusVeiculo = statusVeiculo;
         this.quilometragemAtual = quilometragemAtual;
         this.dataUltimaManutencao = dataUltimaManutencao;
     }
