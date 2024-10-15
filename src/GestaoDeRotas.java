@@ -6,7 +6,6 @@ import models.exceptions.gestaoDeRotas.CodigoInvalidoException;
 import models.exceptions.gestaoDeRotas.DistanciaInvalidaException;
 import models.exceptions.gestaoDeRotas.NomeCidadeInvalidoException;
 import models.exceptions.gestaoDeRotas.StatusRotaInvalidoException;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;

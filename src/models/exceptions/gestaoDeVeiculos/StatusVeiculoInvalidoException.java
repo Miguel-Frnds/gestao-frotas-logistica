@@ -1,7 +1,7 @@
 package models.exceptions.gestaoDeVeiculos;
 
-public class StatusInvalidoException extends Exception {
-    public StatusInvalidoException(String message) {
+public class StatusVeiculoInvalidoException extends Exception {
+    public StatusVeiculoInvalidoException(String message) {
         super(message);
     }
 }

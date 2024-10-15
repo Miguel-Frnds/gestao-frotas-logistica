@@ -1,21 +1,28 @@
+package models;
+
+import models.enums.StatusRota;
+
 public class Rota {
 
-    private long codigoRota;
+    private String codigoRota;
     private String cidadeDeOrigem;
-    private long distanciaKM;
+    private String cidadeDeDestino;
+    private double distancia;
     private StatusRota statusRota;
 
-    public Rota(long codigoRota, String cidadeDeOrigem, long distanciaKM) {
+    public Rota(String codigoRota, String cidadeDeOrigem, String cidadeDeDestino, double distancia, StatusRota statusRota) {
         this.codigoRota = codigoRota;
         this.cidadeDeOrigem = cidadeDeOrigem;
-        this.distanciaKM = distanciaKM;
+        this.cidadeDeDestino = cidadeDeDestino;
+        this.distancia = distancia;
+        this.statusRota = statusRota;
     }
 
-    public long getCodigoRota() {
+    public String getCodigoRota() {
         return codigoRota;
     }
 
-    public void setCodigoRota(long codigoRota) {
+    public void setCodigoRota(String codigoRota) {
         this.codigoRota = codigoRota;
     }
 
@@ -27,12 +34,12 @@ public class Rota {
         this.cidadeDeOrigem = cidadeDeOrigem;
     }
 
-    public long getDistanciaKM() {
-        return distanciaKM;
+    public double getDistanciaKM() {
+        return distancia;
     }
 
-    public void setDistanciaKM(long distanciaKM) {
-        this.distanciaKM = distanciaKM;
+    public void setDistanciaKM(double distanciaKM) {
+        this.distancia = distancia;
     }
 
     public StatusRota getStatusRota() {
@@ -41,5 +48,16 @@ public class Rota {
 
     public void setStatusRota(StatusRota statusRota) {
         this.statusRota = statusRota;
+    }
+
+    @Override
+    public String toString() {
+        return "Rota{" +
+                "Código: '" + codigoRota + '\'' +
+                ", Cidade de Origem: '" + cidadeDeOrigem + '\'' +
+                ", Cidade de Destino: '" + cidadeDeDestino + '\'' +
+                ", Distância: " + distancia + " km" +
+                ", Status: " + statusRota +
+                '}';
     }
 }
