@@ -1,4 +1,6 @@
-import models.*;
+import models.Veiculo;
+import models.enums.StatusVeiculo;
+import models.exceptions.gestaoDeVeiculos.*;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -142,7 +144,7 @@ public class GestaoDeVeiculos {
                 escolhaStatus = Integer.parseInt(scan.nextLine());
 
                 if(escolhaStatus < 1 || escolhaStatus > 3) {
-                    throw new StatusInvalidoException("Erro: O status informado é inválido. Escolha um número entre 1 e 3.");
+                    throw new StatusVeiculoInvalidoException("Erro: O status informado é inválido. Escolha um número entre 1 e 3.");
                 }
                 switch(escolhaStatus) {
                     case 1:
@@ -160,7 +162,7 @@ public class GestaoDeVeiculos {
             catch (NumberFormatException e) {
                 System.out.println("Erro: O status contém caracteres inválidos. Por favor, insira apenas números entre 1 a 3.");
             }
-            catch (StatusInvalidoException e) {
+            catch (StatusVeiculoInvalidoException e) {
                 System.out.println(e.getMessage());
             }
         }
@@ -479,7 +481,7 @@ public class GestaoDeVeiculos {
                 escolhaStatus = Integer.parseInt(scan.nextLine());
 
                 if(escolhaStatus < 1 || escolhaStatus > 3) {
-                    throw new StatusInvalidoException("Erro: O status informado é inválido. Escolha um número entre 1 e 3.");
+                    throw new StatusVeiculoInvalidoException("Erro: O status informado é inválido. Escolha um número entre 1 e 3.");
                 }
                 switch(escolhaStatus) {
                     case 1:
@@ -497,7 +499,7 @@ public class GestaoDeVeiculos {
             catch (NumberFormatException e) {
                 System.out.println("Erro: O status contém caracteres inválidos. Por favor, insira apenas números entre 1 a 3.");
             }
-            catch (StatusInvalidoException e) {
+            catch (StatusVeiculoInvalidoException e) {
                 System.out.println(e.getMessage());
             }
         }

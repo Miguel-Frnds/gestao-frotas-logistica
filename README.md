@@ -35,16 +35,16 @@ gestao-frotas-logistica/
 │
 ├── src/
 │   ├── Main.java          # Classe principal para iniciar a aplicação
-│   ├── Veiculo.java       # Classe para gerenciamento de veículos
-│   ├── Motorista.java     # Classe para gerenciamento de motoristas
-│   ├── Rota.java          # Classe para gerenciamento de rotas
+│   ├── models.Veiculo.java       # Classe para gerenciamento de veículos
+│   ├── models.Motorista.java     # Classe para gerenciamento de motoristas
+│   ├── models.Rota.java          # Classe para gerenciamento de rotas
 │   └── ...                # Outras classes do sistema
 │
 ├── docs/                  # Documentação do projeto
 │   └── API.md             # Explicação das classes e métodos
 │
 ├── tests/                 # Scripts de teste para o sistema
-│   └── VeiculoTest.java    # Testes da classe Veiculo
+│   └── VeiculoTest.java    # Testes da classe models.Veiculo
 │
 └── README.md              # Arquivo de informações do projeto
   ```
@@ -63,7 +63,7 @@ gestao-frotas-logistica/
 5. Abra um pull request.
 
 ## Normas de Commit
-- Use o tempo verbal no imperativo e seja descritivo, como por exemplo: `Corrige bug na classe de Motorista`, `Adiciona filtro para veículos`.
+- Use o tempo verbal no imperativo e seja descritivo, como por exemplo: `Corrige bug na classe de models.Motorista`, `Adiciona filtro para veículos`.
 - Mantenha os commits pequenos e coesos, focando em uma mudança por commit.
 - Mensagens de commit em inglês ou português, mas consistentes em todo o projeto.
 

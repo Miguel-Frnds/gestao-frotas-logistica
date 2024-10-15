@@ -1,3 +1,7 @@
+package models;
+
+import models.enums.StatusVeiculo;
+
 import java.time.LocalDate;
 
 public class Veiculo {
@@ -8,6 +12,7 @@ public class Veiculo {
     private StatusVeiculo statusVeiculo;
     private double quilometragemAtual;
     private LocalDate dataUltimaManutencao;
+    private Rota veiculoRota;
 
     public Veiculo(String placa, String marca, String modelo, int ano, StatusVeiculo statusVeiculo, double quilometragemAtual, LocalDate dataUltimaManutencao) {
         this.placa = placa;
@@ -73,5 +78,35 @@ public class Veiculo {
 
     public void setDataUltimaManutencao(LocalDate dataUltimaManutencao) {
         this.dataUltimaManutencao = dataUltimaManutencao;
+    }
+
+    public Rota getVeiculoRota() {
+        return veiculoRota;
+    }
+
+    public void associarRota(Rota rota) {
+        if(rota == null) {
+            throw new IllegalArgumentException("Erro: A rota não pode ser nula.");
+        }
+
+        this.veiculoRota = rota;
+
+        this.statusVeiculo = StatusVeiculo.EM_VIAGEM;
+
+        System.out.println("Rota " + rota.getCodigoRota() + " associada ao veículo " + this.placa + " com sucesso.");
+    }
+
+    @Override
+    public String toString() {
+        return "Veiculo{" +
+                "Placa: '" + placa + '\'' +
+                ", Marca: '" + marca + '\'' +
+                ", Modelo: '" + modelo + '\'' +
+                ", Ano: " + ano +
+                ", Status : " + statusVeiculo +
+                ", Quilometragem Atual: " + quilometragemAtual + " km" +
+                ", Data da última manutenção: " + dataUltimaManutencao +
+                ", Rota do veículo: " + veiculoRota +
+                '}';
     }
 }

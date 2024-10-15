@@ -1,4 +1,4 @@
-package models.exceptions;
+package models.exceptions.gestaoDeVeiculos;
 
 public class ModeloInvalidoException extends Exception {
     public ModeloInvalidoException(String message) {
